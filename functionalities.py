@@ -46,8 +46,9 @@ def get_img(l):
     return t
 
 
-def use_worm(text, loc):
-    move_mouse(loc)
+def use_worm(text, loc, no_clients):
+    if no_clients != 1:
+        move_mouse(loc)
     if "Najpierw" in text:
         bs.f4()
         time.sleep(random.uniform(0.2, 0.4))
@@ -88,20 +89,23 @@ def use_worm(text, loc):
                                     bs.space()
 
 
-def fishing(loc):
+def fishing(loc, no_clients, f_cnt, cnt):
     text = get_img(loc)
-    move_mouse(loc)
-    bs.space()
+    if no_clients != 1:
+        move_mouse(loc)
+    if cnt % 10 == 0:
+        bs.space()
     if "Naciśnij" in text:
-        print(text)
+        f_cnt += 1
         text_split = text.split(" ")
         x = text_split[2]
         print("Spacje zostanie wcisnieta: ", x, " razy")
         for _ in range(int(x)):
-            time.sleep(random.uniform(0.3, 0.4))
+            time.sleep(random.uniform(0.14, 0.22))
             print("Zostało: ", int(x)-_)
             bs.space()
-        time.sleep(random.uniform(0.3, 1))
+        time.sleep(random.uniform(0.1, 0.26))
+    return text, f_cnt
 
 
 if __name__ == "__main__":

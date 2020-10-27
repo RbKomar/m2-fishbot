@@ -106,7 +106,7 @@ def ReleaseKey(hexKeyCode):
 
 def space():
     PressKey(VK_SPACE)
-    time.sleep(random.uniform(0.1, 0.25))
+    time.sleep(random.uniform(0.1, 0.15))
     ReleaseKey(VK_SPACE)
 
 
@@ -124,13 +124,13 @@ def f3():
 
 def f2():
     PressKey(VK_F2)
-    time.sleep(random.uniform(0.1, 0.25))
+    time.sleep(random.uniform(0.1, 0.15))
     ReleaseKey(VK_F2)
 
 
 def f1():
     PressKey(VK_F1)
-    time.sleep(random.uniform(0.1, 0.25))
+    time.sleep(random.uniform(0.1, 0.15))
     ReleaseKey(VK_F1)
 
 
