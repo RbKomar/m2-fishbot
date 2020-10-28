@@ -1,0 +1,9 @@
+pip install keyboard
+pip install pyautogui
+pip install numpy
+pip install pytesseract
+pip install ctypes
+pip install opencv-python
+
+
+pytesseract installers: https://github.com/UB-Mannheim/tesseract/wiki
